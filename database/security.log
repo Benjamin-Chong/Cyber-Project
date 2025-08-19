@@ -1,0 +1,77 @@
+2025-08-15 14:09:17,566 - INFO - User 'nora' created. Breached: False, Count: 0
+2025-08-15 14:09:58,722 - INFO - User 'bchong' attempted login.
+2025-08-15 14:10:00,607 - WARNING - Failed login attempt for bchong. Attempts left: 2
+2025-08-15 14:10:02,339 - WARNING - Failed login attempt for bchong. Attempts left: 1
+2025-08-15 14:10:03,317 - WARNING - Failed login attempt for bchong. Attempts left: 0
+2025-08-15 14:10:03,318 - WARNING - User 'bchong' locked out after too many failed attempts.
+2025-08-15 14:12:20,638 - INFO - Admin searched for user: bchong
+2025-08-15 14:12:49,340 - INFO - User 'prism' created. Breached: False, Count: 0
+2025-08-15 14:14:11,591 - INFO - All users printed successfully.
+2025-08-15 14:15:54,787 - INFO - CLI session ended by user.
+2025-08-15 14:16:24,261 - INFO - CLI session ended by user.
+2025-08-16 15:44:58,526 - INFO - User 'bchong' created. Breached: False, Count: 0
+2025-08-16 15:47:23,673 - WARNING - Weak password attempted for user: 1
+2025-08-16 15:47:23,958 - WARNING - Weak password attempted for user: 1
+2025-08-16 15:47:25,879 - WARNING - Password confirmation mismatch during user creation.
+2025-08-16 15:50:26,757 - INFO - User 'bchong' created. Breached: False, Count: 0
+2025-08-16 15:50:30,021 - INFO - User, bchong, has enabled MFA.
+2025-08-16 16:09:50,973 - WARNING - Attempted to create duplicate username: bchong
+2025-08-16 16:10:20,332 - INFO - User 'bchong' created. Breached: False, Count: 0
+2025-08-16 16:10:46,611 - INFO - User, bchong, has enabled MFA.
+2025-08-16 16:10:48,643 - WARNING - Non-integer input entered in CLI.
+2025-08-16 16:10:53,053 - INFO - All users printed successfully.
+2025-08-16 16:10:57,972 - INFO - User 'bchong' attempted login.
+2025-08-16 16:11:00,962 - INFO - User 'bchong' logged in successfully.
+2025-08-16 16:17:28,606 - INFO - User 'bchong' attempted login.
+2025-08-16 16:17:32,826 - INFO - User 'bchong' logged in successfully.
+2025-08-16 16:17:48,716 - INFO - User 'bchong' attempted login.
+2025-08-16 16:17:51,192 - INFO - User 'bchong' logged in successfully.
+2025-08-16 16:18:33,167 - INFO - User 'bchong' attempted login.
+2025-08-16 16:18:36,928 - INFO - User 'bchong' logged in successfully.
+2025-08-16 16:19:04,529 - WARNING - Non-integer input entered in CLI.
+2025-08-16 16:19:06,494 - INFO - All users printed successfully.
+2025-08-16 16:19:23,503 - INFO - CLI session ended by user.
+2025-08-16 16:20:58,841 - INFO - User 'bchong' attempted login.
+2025-08-16 16:21:01,488 - INFO - User 'bchong' logged in successfully.
+2025-08-16 16:21:21,713 - WARNING - Non-integer input entered in CLI.
+2025-08-16 16:21:23,141 - INFO - CLI session ended by user.
+2025-08-16 16:23:51,860 - INFO - CLI session ended by user.
+2025-08-16 16:24:40,196 - INFO - User 'bchong' attempted login.
+2025-08-16 16:24:47,459 - INFO - User 'bchong' logged in successfully.
+2025-08-17 18:47:54,882 - WARNING - Invalid CLI command entered: cls
+2025-08-17 18:49:40,574 - INFO - All users printed successfully.
+2025-08-17 18:49:46,555 - INFO - CLI session ended by user.
+2025-08-18 13:38:04,240 - INFO - Print command executed on empty database.
+2025-08-18 13:38:08,716 - INFO - CLI session ended by user.
+2025-08-18 14:29:10,421 - WARNING - Login attempt for non-existent user: 
+2025-08-18 14:29:47,582 - INFO - CLI session ended by user.
+2025-08-18 15:30:01,060 - WARNING - Delete attempt for non-existent user: bchong
+2025-08-18 15:30:53,579 - INFO - CLI session ended by user.
+2025-08-18 15:35:13,640 - INFO - User 'bchong' created. Breached: False, Count: 0
+2025-08-18 15:35:19,240 - INFO - All users printed successfully.
+2025-08-18 15:35:36,702 - WARNING - Password confirmation mismatch during delete for bchong
+2025-08-18 15:36:14,201 - WARNING - Incorrect password attempt during delete for bchong. Attempts left: 2
+2025-08-18 15:41:32,733 - WARNING - Unauthorized admin search attempt.
+2025-08-18 15:41:41,909 - INFO - Admin searched for user: bchong
+2025-08-18 15:43:24,555 - INFO - CLI session ended by user.
+2025-08-19 13:46:49,563 - WARNING - Attempted to create duplicate username: bchong
+2025-08-19 13:46:54,581 - WARNING - Username confirmation mismatch.
+2025-08-19 13:47:07,737 - INFO - User 'bchong' attempted login.
+2025-08-19 13:47:11,487 - WARNING - Failed login attempt for bchong. Attempts left: 2
+2025-08-19 13:47:12,489 - WARNING - Failed login attempt for bchong. Attempts left: 1
+2025-08-19 13:47:13,253 - WARNING - Failed login attempt for bchong. Attempts left: 0
+2025-08-19 13:47:13,254 - WARNING - User 'bchong' locked out after too many failed attempts.
+2025-08-19 13:58:17,696 - INFO - CLI session ended by user.
+2025-08-19 13:58:35,670 - INFO - CLI session ended by user.
+2025-08-19 14:06:55,950 - ERROR - Exception during user creation: cannot unpack non-iterable bool object
+2025-08-19 14:07:58,828 - ERROR - Exception during user creation: cannot unpack non-iterable bool object
+2025-08-19 14:10:22,909 - INFO - User 'urma' created. Breached: False, Count: 0
+2025-08-19 14:10:25,146 - INFO - User, urma, has enabled MFA.
+2025-08-19 14:12:13,633 - INFO - User 'prism' created. Breached: False, Count: 0
+2025-08-19 14:12:14,755 - INFO - User, prism, has enabled MFA.
+2025-08-19 14:14:10,577 - INFO - CLI session ended by user.
+2025-08-19 14:14:12,875 - WARNING - Invalid CLI command entered: "c:\program files\python312\python.exe" c:/users/home/documents/github/cyber-project/cli.py
+2025-08-19 14:14:20,584 - WARNING - Attempted to create duplicate username: bchong
+2025-08-19 14:14:24,005 - WARNING - Attempted to create duplicate username: prism
+2025-08-19 14:14:28,157 - WARNING - Attempted to create duplicate username: urma
+2025-08-19 14:14:36,760 - INFO - User 'nora' created. Breached: False, Count: 0

@@ -1,0 +1,40 @@
+Write detailed README.md covering:
+
+Project goals
+
+How to run/use it
+
+Security features explained
+
+Known limitations
+
+✅ 3. Finalize README.md
+
+Your README should have:
+
+Project Goals (what problem it solves, why it matters)
+
+How to Run/Use It (dependencies, run instructions, example usage)
+
+Security Features Explained (encryption, lockout system, safe JSON handling)
+
+Known Limitations (e.g., key stored locally, not production-ready, console-only)
+
+Example Usage (screenshot/code snippet of running it)
+
+✅ 4. Style Polish
+
+Consistency (indentation, variable naming, f vs file like we talked about).
+
+Remove unused imports (e.g., Fernet you don’t need).
+
+Make sure all print() outputs look neat for users (no raw debug unless intentional).
+
+✅ 5. Reflection
+
+Since this is your final day, write a short reflection for yourself:
+
+What you learned (encryption, safe file handling, project structuring).
+
+What you’d improve if you had 1–2 more weeks.
+This is great material for resume bullets or interviews.

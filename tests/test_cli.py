@@ -1,8 +1,8 @@
 import pytest
 import pyotp
-from cli import new_user, load_database, save_database, lockout, load_lockout, login, delete_user, search
+from cli import new_user,login, delete_user, search
 from breach import check_breach
-from auth import hash_password, verify_password
+from auth import hash_password
 
 # --- Fake in-memory database fixture ---
 @pytest.fixture

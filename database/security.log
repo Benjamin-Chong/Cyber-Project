@@ -75,3 +75,31 @@
 2025-08-19 14:14:24,005 - WARNING - Attempted to create duplicate username: prism
 2025-08-19 14:14:28,157 - WARNING - Attempted to create duplicate username: urma
 2025-08-19 14:14:36,760 - INFO - User 'nora' created. Breached: False, Count: 0
+2025-08-19 19:05:55,587 - WARNING - Attempted to create duplicate username: bchong
+2025-08-19 19:06:17,992 - WARNING - Password confirmation mismatch during user creation.
+2025-08-19 19:11:34,794 - INFO - User "ben" created. Breached: False, Count: 0
+2025-08-19 19:20:13,942 - INFO - All users printed successfully.
+2025-08-19 19:20:18,009 - WARNING - Invalid CLI command entered: cls
+2025-08-19 19:20:20,699 - INFO - Press Enter to continue...
+2025-08-19 19:22:21,050 - INFO - User "bchong" created. Breached: False, Count: 0
+2025-08-19 19:22:37,123 - INFO - All users printed successfully.
+2025-08-19 19:29:19,810 - INFO - Press Enter to continue...
+2025-08-19 19:29:26,157 - INFO - User "bchong" attempted login.
+2025-08-19 19:29:29,315 - INFO - User "bchong" logged in successfully.
+2025-08-19 19:32:08,135 - INFO - Press Enter to continue...
+2025-08-19 19:33:22,801 - INFO - User deleted user "bchong" successfully.
+2025-08-19 19:34:22,963 - INFO - Press Enter to continue...
+2025-08-19 19:34:38,234 - INFO - Admin searched for user: bchong
+2025-08-19 19:36:34,960 - INFO - User "bchong" created. Breached: False, Count: 0
+2025-08-19 19:36:48,205 - INFO - All users printed successfully.
+2025-08-19 19:36:51,259 - INFO - Press Enter to continue...
+2025-08-19 19:42:22,867 - INFO - Press Enter to continue...
+2025-08-19 19:44:44,373 - INFO - Press Enter to continue...
+2025-08-19 19:45:55,712 - INFO - All users printed successfully.
+2025-08-19 19:46:02,245 - INFO - User "bchong" attempted login.
+2025-08-19 19:46:04,492 - WARNING - Failed login attempt for bchong. Attempts left: 2
+2025-08-19 19:46:05,256 - WARNING - Failed login attempt for bchong. Attempts left: 1
+2025-08-19 19:46:06,111 - WARNING - Failed login attempt for bchong. Attempts left: 0
+2025-08-19 19:46:06,112 - WARNING - User "bchong" locked out after too many failed attempts.
+2025-08-19 19:46:38,304 - WARNING - Locked out login attempt for bchong.
+2025-08-19 19:57:48,701 - INFO - Press Enter to continue...

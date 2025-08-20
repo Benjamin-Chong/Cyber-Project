@@ -30,15 +30,18 @@ def main():
         print('[7] Disable MFA')
         print('[8] Exit')
         user_input = input('Enter your desired command (or type "help"): ').strip().lower()
+
         if user_input == 'help':
             print('\nEnter the number corresponding to the action you want to perform.')
             input('Press Enter to continue...')
             continue
+
         if not user_input.isdigit():
             print('[ERROR] Invalid input. Enter a valid command.')
             logging.warning(f'Invalid CLI command entered: {user_input}')
             input('Press Enter to continue...')
             continue
+
         user_input = int(user_input)
         match user_input:
             case 1:
@@ -87,6 +90,7 @@ def new_user(test_mode = False):
         with open('database/common_passwords.txt', 'r') as common:
             data_json = load_database()
             user_success = False
+
             while not user_success:
                 username = input('Please enter your username: ').strip()
                 username_confirm = input('Please confirm your username: ').strip()
@@ -95,16 +99,19 @@ def new_user(test_mode = False):
                     print('[INFO] Usernames are not the same.\n')
                     logging.warning('Username confirmation mismatch.')
                     continue
+
                 if not username:
                     if test_mode: return False
                     print('[ERROR] Username cannot be empty.\n')
                     logging.warning('Empty username attempted.')
                     continue
+
                 if ' ' in username:
                     if test_mode: return False
                     print('[ERROR] Username cannot contain spaces.\n')
                     logging.warning('Username with spaces attempted.')
                     continue
+
                 if any(username == user['username'] for user in data_json):
                     if test_mode: return False
                     print('[ERROR] Username already exists.\n')
@@ -117,11 +124,13 @@ def new_user(test_mode = False):
             while not pass_success:
                 password = getpass.getpass('Please enter your password: ')
                 pass_confirm = getpass.getpass('Please confirm your password: ')
+
                 if password != pass_confirm:
                     if test_mode: return False
                     print('[INFO] The passwords do not match.\n')
                     logging.warning('Password confirmation mismatch during user creation.')
                     continue
+
                 has_number = any(char.isdigit() for char in password)
                 has_upper = any(char.isupper() for char in password)
                 has_special = any(not char.isalnum() for char in password)
@@ -172,10 +181,12 @@ def print_json():
             print('[INFO] Database is empty.\n')
             logging.info('Print command executed on empty database.')
             return
+        
         for entry in data:
             print(f'Username: {entry['username']}')
         print('[SUCCESS] Print finished.\n')
         logging.info('All users printed successfully.')
+
     except Exception as e:
         print(f'[ERROR] Could not read database: {e}\n')
         logging.error(f'Database read failed: {e}')
@@ -194,6 +205,7 @@ def login(test_mode = False):
         if user['username'] == username:
             lock_time = datetime.datetime.fromisoformat(user['time']) #changes the time in the json into an time object so that it can be compared in the next if statement
             unlock = lock_time + datetime.timedelta(minutes=15) #unlock time
+
             if datetime.datetime.now() < unlock:
                 print(f'Your account, {username}, is locked until {unlock}.\n')
                 logging.warning(f'Locked out login attempt for {username}.')
@@ -205,6 +217,7 @@ def login(test_mode = False):
         if user['username'] == username:
             print('[INFO] Username has been found.\n')
             logging.info(f'User "{username}" attempted login.')
+
             while count < 3:
                 password = getpass.getpass('Please enter your password: ')
                 if verify_password(password, user['password']):
@@ -225,10 +238,12 @@ def login(test_mode = False):
                     print(f'[INFO] Login unsuccessful. Attempts left: {attempts_left}\n')
                     logging.warning(f'Failed login attempt for {username}. Attempts left: {attempts_left}')
                     count += 1
+
             lockout(username, count)
             print('[INFO] LOCKOUT: too many attempts.\n')
             logging.warning(f'User "{username}" locked out after too many failed attempts.')
             return False
+        
     print('[ERROR] User has not been found.\n')
     if test_mode: return False
     logging.warning(f'Login attempt for non-existent user: {username}')
@@ -260,12 +275,14 @@ def delete_user(test_mode=False):
             print('Passwords did not match.\n')
             logging.warning(f'Password confirmation mismatch during delete for {username}')
             continue
+
         confirm_delete = input(f'Are you sure you want to delete "{username}"? (y/n): ').strip().lower()
         if confirm_delete != 'y':
             if test_mode: return False
             print('[INFO] Deletion cancelled.\n')
             logging.info(f'Deletion cancelled for {username}')
             return
+        
         if verify_password(password, user_delete['password']):
             database.remove(user_delete)
             save_database(database)
@@ -300,6 +317,7 @@ def search(test_mode = False):
         logging.warning('Unauthorized admin search attempt.')
         print('[ERROR] You are unauthorized to run search for users.\n')
         return
+    
     username = input('Enter user to search: ')
     logging.info(f'Admin searched for user: {username}')
     database = load_database()

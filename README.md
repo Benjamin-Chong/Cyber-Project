@@ -1,63 +1,65 @@
-Project Goals:
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-The purpose of this project was to explore concepts of cybersecurity while also improving on my logic and coding skills. I was originally unsure if I wanted to pursue cybersecurity. So I decided to explore more cyber focused concepts like multi-factor authentication, hashing, and encryption. In addition, my goal was to better understand how these security measures are applied in real systems and to challenge myself with a security focused project.
+# Cybersecurity CLI Project
+*A Python CLI exploring authentication, encryption, and password security*  
 
-How To Run/Use:
+## 📖 Overview
 
-1. Install Dependencies: Make sure python is installed and install all of the libraries that are covered in the requirements.txt
+This project explores core cybersecurity concepts through a Python-based command line interface. It simulates user account management with features such as:
 
-2. Run the Program: python cli.py
+- Multi-factor authentication (MFA) with QR codes and authenticator apps
 
-3. Example usage:
+- Password hashing and verification using bcrypt and SHA-1 breach check
 
-i. ![Example of program running](screenshots/Main.png)
+- Data encryption/decryption with Fernet and salt
 
-Upon running the cli.py file, you will be greeted by the main menu where you will be able to choose from a variety of actions. We will go through each option.
+- Account lockout system after repeated failed logins
 
-ii. ![Example of creating a new user](screenshots/AddUser.png)
+The goal of this project was to deepen my understanding of security principles while improving logic and coding skills.
 
-If you decide to choose the first option, it will ask you to add your user to the database. It will require a few things: 1. A valid username 2. a valid password 3. 'y/n' depending if you want to enable MFA. (You will need a phone if you decide you want to enable MFA) Once you put in your username and your password twice, you will have the option to enable MFA. If you do you will need your authenticator app and once you scan the qr code, it will require you type in the password on your screen. If both match, then it will be enabled. Going forward, you will need that code every time you log in.
+## 🚀 Features
+- User Management – Create, delete, search, and list users
 
-iii. ![Example of printing all users](screenshots/Print.png)
+- Authentication – Login with password and optional MFA
 
-For this example I have myself as the only user. As more users are added to the database, more will be printed out.
+- Password Security – Hashing with bcrypt, breach check using SHA-1 and K-anonymity API
 
-iv. ![Example of login](screenshots/Login.png)
+- Encryption – Sensitive data encrypted locally with Fernet
 
-For this example, I am logging into my own account which does not have MFA enabled (I will show enabling later). All you need to do is have your username and password. 
+- Lockout – Temporary lock after multiple failed login attempts
+## 🔧 How To Run/Use:
 
-v. ![Example of deleting](screenshots/Delete.png)
+1. **Install Dependencies:** 
+Make sure python is installed and install all of the libraries that are covered in the requirements.txt. Use pip install -r requirements.txt
 
-When deleting someone from the database, you will need your username and your password. You will not need MFA even if you have it enabled.
+2. **Run the Program:** python cli.py
 
-vi. ![Example of searching for one user](screenshots/Search.png)
+3. **Example usage:**
 
-Searching for one individual person will require the admin password. If the user is found it will return that the user was indeed found. If the user does not exist (used in the example image), it will return 'The user ____ was not found'
+![Example video of creating a new user](assets/login.gif)  
+*Creating a new user*  
 
-vii. ![Example of enabling MFA](screenshots/Enable.png)
+![Example video of creating a new user](assets/lockout.gif)
+*Account lockout*  
 
-When enabling MFA, you will need to enter your username and once the username is found, you will need your phone to scan the QR code which should give you a six digit code. Once you have that code, you will need to enter that into the terminal. If both match, then you will have it successfully enabled.
+## ⚠️ Known Limitations:
 
-viii. ![Example of disabling MFA](screenshots/Disable.png)
+- ❌ Does not support undoing actions (Ctrl + C required)
+- ⚠️ MFA enable/disable does not require password
+- ⚠️ Key stored locally
+- ❌ Not production ready
+- Console only
 
-In this example, you can see that disabling MFA is very fast and you only need your username and your password.
+## 🛠 Tech Stack
+- Python
+- bcrypt - password hashing
+- cryptography(Fernet) - encryption/decryption
+- requests - API calls for password breach checking
 
-ix. ![Example of lockout](screenshots/Lockout.png)
+## 📝 Reflection  
+This project strengthened my understanding of core cybersecurity practices and improved my Python skills.  
+I explored authentication, hashing, and encryption concepts that gave me a clearer idea of whether I’d like to pursue cybersecurity further.
 
-Here you can see that a lockout occurs if too many incorrect attempts are tried.
-
-!![Example of lockout](screenshots/LockoutEnforced.png)
-
-The lockout is enforced if you try to login during the time that it is locked.
-
-Security Features Explained:
-
-During this project, I learned about hashing, encryption, and lockout systems. For hashing, I implemented hashing in order to protect users passwords using bcrypt. In order to check it in the breach using the k-anomity API, I had to hash the passwords from the user using SHA-1 where I would then compare it against the API. For encryption, I learned about fernet and salt. The fernet essentially is the key that allows us as coder to decrypt and encrypt data. The salt is the randomly generated funciton that changes the code. 
-
-Known Limitations:
-
-- Does not support undoing actions. You have to use Ctrl + C
-- MFA enable or disable does not use password at all
-- Key stored locally
-- Not production ready
-- Console Only
+## License
+This project is licensed under the [MIT License](LICENSE).

@@ -41,7 +41,6 @@ Make sure python is installed and install all of the libraries that are covered 
 *Creating a new user*  
 
 ![Example video of creating a new user](assets/lockout.gif)
-*Account lockout*  
 
 ## ⚠️ Known Limitations:
 
